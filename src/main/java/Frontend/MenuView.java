@@ -1,6 +1,5 @@
 package Frontend;
 
-//import io.github.kaffite.informaatikuquiz.App.Main;
 import App.Main;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -13,13 +12,17 @@ import javafx.stage.Stage;
 
 public class MenuView {
 
-
+    /**
+     * Function: Builds a scene for main menu
+     * @param stage main stage
+     * @return New scene used for menu view
+     */
     public static Scene getScene(Stage stage) {
         BorderPane Bpane = new BorderPane();
         Scene scene =  new Scene(Bpane, 480, 500);
-        //String css = (scene.getClass().getResource("style.css").toExternalForm());
-        //scene.getStylesheets().add("css");
-        //Bpane.setStyle();
+        // String css = (scene.getClass().getResource("style.css").toExternalForm());
+        // scene.getStylesheets().add("css");
+       // Bpane.setStyle();
 
 
         Text title = new Text("Informaatiku Quiz");

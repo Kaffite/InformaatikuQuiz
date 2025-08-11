@@ -1,6 +1,5 @@
 package App;
 
-//import io.github.kaffite.informaatikuquiz.Frontend.MenuView;
 import Frontend.MenuView;
 import javafx.application.Application;
 import javafx.scene.Scene;
