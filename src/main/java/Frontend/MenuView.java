@@ -20,15 +20,21 @@ public class MenuView {
     public static Scene getScene(Stage stage) {
         BorderPane Bpane = new BorderPane();
         Scene scene =  new Scene(Bpane, 480, 500);
-        // String css = (scene.getClass().getResource("style.css").toExternalForm());
-        // scene.getStylesheets().add("css");
-       // Bpane.setStyle();
+        scene.getStylesheets().add("style.css");
+        Bpane.setId("normal-background");
 
+        // Title
+        Text filler = new Text(); // Filler text to set title to right position
+        Text title = new Text(40, 50,"Milline informaatik oled sina?");
+        title.setFont(new Font( "Verdana", 18));
+        //title.setFill(Color.rgb(40, 166, 194));
+        VBox titleBox = new VBox(50);
+        titleBox.getChildren().addAll(filler, title);
+        Bpane.setTop(titleBox);
+        titleBox.setAlignment(Pos.TOP_CENTER);
+        title.setId("fancytext"); //
 
-        Text title = new Text("Informaatiku Quiz");
-        Bpane.setTop(title);
-        //title.setAlignment(Pos.TOP_CENTER);
-
+        // Vbox for Buttons
         VBox vBtnBox = btnBox(stage);
         Bpane.setCenter(vBtnBox);
         vBtnBox.setAlignment(Pos.CENTER);
@@ -71,7 +77,7 @@ public class MenuView {
     }
 
     /**
-     * Function: Helper method for creating Buttons
+     * Function: Helper method for creating buttons (in btnBox)
      * @param text text that Button contains
      * @param btnWidth The width of a button
      * @return Modified Button that meets the project standard

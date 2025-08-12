@@ -1,4 +1,10 @@
 
-.normal-background {
-    -fx-background-color: aqua;
+#normal-background {
+    -fx-background-color: #265898;
+}
+#fancytext {
+    -fx-font: 20px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
 }
