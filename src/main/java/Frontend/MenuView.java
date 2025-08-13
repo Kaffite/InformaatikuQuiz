@@ -17,7 +17,9 @@ public class MenuView {
      * @param stage main stage
      * @return New scene used for menu view
      */
-    public static Scene getScene(Stage stage, BorderPane BPane, Scene scene) {
+    public static Scene getScene(Stage stage) {
+        BorderPane BPane = new BorderPane();
+        Scene scene = Main.baseScene(BPane);
 
         // Title text
         Text filler = new Text(); // Filler text to set title to right position
@@ -29,7 +31,7 @@ public class MenuView {
         titleBox.setAlignment(Pos.TOP_CENTER);
 
         // Vbox for Buttons
-        VBox vBtnBox = btnBox(stage, BPane, scene);
+        VBox vBtnBox = btnBox(stage);
         BPane.setCenter(vBtnBox);
         vBtnBox.setAlignment(Pos.CENTER);
 
@@ -44,7 +46,7 @@ public class MenuView {
      * 2) Go to the settings
      * 3) Exit the application
      */
-    private static VBox btnBox(Stage stage, BorderPane BPane, Scene scene) {
+    private static VBox btnBox(Stage stage) {
         VBox verticalBox = new VBox();
         verticalBox.setPrefWidth(150);
         verticalBox.setSpacing(20);
@@ -53,12 +55,12 @@ public class MenuView {
         // Start the quiz
         Button startBtn = menuBtn("Alusta Mängu", btnWidth);
         startBtn.setOnMouseClicked(mouseEvent -> {
-            Main.showView(stage, QuizView.getScene(stage, BPane, scene), "Mäng" );
+            Main.showView(stage, GameView.getScene(stage), "Mäng" );
         });
         // Go to settings
         Button settingsBtn = menuBtn("Seaded", btnWidth);
         settingsBtn.setOnMouseClicked(MouseEvent -> {
-            Main.showView(stage, SettingsView.getScene(stage, BPane, scene), "Seaded??");
+            Main.showView(stage, SettingsView.getScene(stage), "Seaded??");
         });
         // Close the application
         Button exitBtn = menuBtn("Välju", btnWidth);

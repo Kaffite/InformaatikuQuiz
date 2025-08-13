@@ -2,6 +2,18 @@
 #normal-background {
     -fx-background-color: #265898;
 }
+
 #title-text {
     -fx-font: 20px Verdana;
+    -fx-fill: snow;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,8), 10, 0, 0, 0);
+
+}
+
+#setting-text {
+    -fx-font: 10px Verdana;
+    -fx-fill: snow;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,8), 10, 0, 0, 0);
 }

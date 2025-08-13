@@ -9,9 +9,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage stage) {
-        BorderPane BPane = new BorderPane();
-        Scene baseScene = baseScene(BPane);
-        Scene menuScene = MenuView.getScene(stage, BPane, baseScene);
+        Scene menuScene = MenuView.getScene(stage);
         showView(stage, menuScene, "Milline informaatik sa oled?" );
     }
 
@@ -30,7 +28,7 @@ public class Main extends Application {
      * @param Bpane new BorderPane that every view will use (instead of creating own Bpane)
      * @return Basic scene that has 'style.css' as a stylesheet and a background
      */
-    private static Scene baseScene(BorderPane Bpane){
+    public static Scene baseScene(BorderPane Bpane){
         Scene scene =  new Scene(Bpane, 480, 500);
         scene.getStylesheets().add("style.css");
         Bpane.setId("normal-background");

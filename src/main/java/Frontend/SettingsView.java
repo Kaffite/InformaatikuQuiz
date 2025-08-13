@@ -1,6 +1,7 @@
 package Frontend;
 
 
+import App.Main;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -8,17 +9,26 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
 public class SettingsView {
 
-    public static Scene getScene(Stage stage, BorderPane BPane, Scene scene) {
+    public static Scene getScene(Stage stage) {
+        BorderPane BPane = new BorderPane();
+        Scene scene = Main.baseScene(BPane);
 
         VBox verticalBox = new VBox();
-        verticalBox.setAlignment(Pos.CENTER);
-        Text text1 = new Text("Mida sa siit otsid?");
-        Text text2 = new Text("Kas sa arvasid, et sellel quiz-il on graafika seaded vms?");
-        Text text3 = new Text("Ära tegele lollustega ja mine tee see quiz ära!");
+        verticalBox.setAlignment(Pos.TOP_CENTER);
+        String [] messages = {
+                "Miks sa siin oled?",
+                "Mis seaded sellel quiz-il olema peaks?",
+                "Ära tegele lollustega!"};
+        for (int i = 0; i < messages.length; i++){
+            Text text = new Text(messages[i].toString());
+            text.setId("title-text");
+            verticalBox.getChildren().add(text);
+        }
 
-        verticalBox.getChildren().addAll(text1, text2, text3);
+        verticalBox.setSpacing(10);
         BPane.setCenter(verticalBox);
 
         return scene;
