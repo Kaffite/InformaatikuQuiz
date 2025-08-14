@@ -29,7 +29,7 @@ public class Main extends Application {
      * @return Basic scene that has 'style.css' as a stylesheet and a background
      */
     public static Scene baseScene(BorderPane Bpane){
-        Scene scene =  new Scene(Bpane, 480, 500);
+        Scene scene =  new Scene(Bpane, 800, 600);
         scene.getStylesheets().add("style.css");
         Bpane.setId("normal-background");
         return scene;

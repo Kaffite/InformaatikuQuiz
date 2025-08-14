@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -24,7 +25,8 @@ public class MenuView {
         // Title text
         Text filler = new Text(); // Filler text to set title to right position
         Text title = new Text("Milline informaatik oled sina?");
-        title.setId("title-text");
+        title.getStyleClass().add("title-text");
+        //title.setId("title-text");
         VBox titleBox = new VBox(50);
         titleBox.getChildren().addAll(filler, title);
         BPane.setTop(titleBox);
@@ -52,18 +54,21 @@ public class MenuView {
         verticalBox.setSpacing(20);
         double btnWidth = verticalBox.getPrefWidth();
 
-        // Start the quiz
+        // Button: Start the quiz
         Button startBtn = menuBtn("Alusta Mängu", btnWidth);
+        startBtn.getStyleClass().addAll("btn", "start-btn");
         startBtn.setOnMouseClicked(mouseEvent -> {
             Main.showView(stage, GameView.getScene(stage), "Mäng" );
         });
-        // Go to settings
+        // Button: Go to settings
         Button settingsBtn = menuBtn("Seaded", btnWidth);
+        settingsBtn.getStyleClass().addAll("btn");
         settingsBtn.setOnMouseClicked(MouseEvent -> {
             Main.showView(stage, SettingsView.getScene(stage), "Seaded??");
         });
-        // Close the application
+        // Button: Close the application
         Button exitBtn = menuBtn("Välju", btnWidth);
+        exitBtn.getStyleClass().addAll("btn", "exit-btn");
         exitBtn.setOnMouseClicked(MouseEvent -> {
             System.exit(0);
         });
@@ -78,7 +83,7 @@ public class MenuView {
      * @param btnWidth The width of a button
      * @return Modified Button that meets the project standard
      */
-    private static Button menuBtn(String text, double btnWidth){
+    public static Button menuBtn(String text, double btnWidth){
         Button btn = new Button(text);
         btn.setMinWidth(btnWidth);
         btn.setFont(new Font(18));

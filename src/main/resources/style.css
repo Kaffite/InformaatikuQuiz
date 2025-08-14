@@ -1,19 +1,30 @@
 
 #normal-background {
-    -fx-background-color: #265898;
+    -fx-background-color: #96bae4;
 }
 
-#title-text {
+
+.title-text{
     -fx-font: 20px Verdana;
-    -fx-fill: snow;
+    -fx-fill: black;
     -fx-font-weight: bold;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,8), 10, 0, 0, 0);
-
 }
 
-#setting-text {
-    -fx-font: 10px Verdana;
-    -fx-fill: snow;
-    -fx-font-weight: bold;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,8), 10, 0, 0, 0);
+.btn{
+    -fx-border-color:black;
+    -fx-border-width: 2 2 2 2 ;
+}
+
+
+.start-btn:hover {
+    -fx-background-color: lawngreen ;
+}
+.start-btn:hover .text{
+    -fx-text-fill: snow;
+}
+
+
+.exit-btn:hover {
+    -fx-background-color: red;
+    -fx-text-fill: snow;
 }
