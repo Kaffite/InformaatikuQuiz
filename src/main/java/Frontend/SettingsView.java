@@ -32,14 +32,13 @@ public class SettingsView {
         }
 
         // Return button
-        Button returnBtn = MenuView.menuBtn("Tagasi menüüsse", 150);
+        Button returnBtn = new Button("Tagasi menüüsse");
         returnBtn.getStyleClass().addAll("btn");
         returnBtn.setOnMouseClicked(mouseEvent -> {
                 Main.showView(stage, MenuView.getScene(stage), "Milline informaatik sa oled?");
         });
         VBox btnBox = new VBox(returnBtn);
-        btnBox.setAlignment(Pos.CENTER); // ??????????????????????????????????????????????????????
-        //verticalBox.getChildren().add(returnBtn);
+        btnBox.setAlignment(Pos.CENTER);
         BPane.setCenter(btnBox);
 
         verticalBox.setSpacing(15);

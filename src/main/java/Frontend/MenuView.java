@@ -55,19 +55,19 @@ public class MenuView {
         double btnWidth = verticalBox.getPrefWidth();
 
         // Button: Start the quiz
-        Button startBtn = menuBtn("Alusta Mängu", btnWidth);
+        Button startBtn = new Button("Alusta Mängu");
         startBtn.getStyleClass().addAll("btn", "start-btn");
         startBtn.setOnMouseClicked(mouseEvent -> {
             Main.showView(stage, GameView.getScene(stage), "Mäng" );
         });
         // Button: Go to settings
-        Button settingsBtn = menuBtn("Seaded", btnWidth);
-        settingsBtn.getStyleClass().addAll("btn");
+        Button settingsBtn = new Button("Seaded");
+        settingsBtn.getStyleClass().add("btn");
         settingsBtn.setOnMouseClicked(MouseEvent -> {
             Main.showView(stage, SettingsView.getScene(stage), "Seaded??");
         });
         // Button: Close the application
-        Button exitBtn = menuBtn("Välju", btnWidth);
+        Button exitBtn = new Button("Välju");
         exitBtn.getStyleClass().addAll("btn", "exit-btn");
         exitBtn.setOnMouseClicked(MouseEvent -> {
             System.exit(0);
@@ -75,19 +75,6 @@ public class MenuView {
 
         verticalBox.getChildren().addAll(startBtn, settingsBtn, exitBtn);
         return verticalBox;
-    }
-
-    /**
-     * Function: Helper method for creating buttons (in btnBox)
-     * @param text text that Button contains
-     * @param btnWidth The width of a button
-     * @return Modified Button that meets the project standard
-     */
-    public static Button menuBtn(String text, double btnWidth){
-        Button btn = new Button(text);
-        btn.setMinWidth(btnWidth);
-        btn.setFont(new Font(18));
-        return btn;
     }
 
 }

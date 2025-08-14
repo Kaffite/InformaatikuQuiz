@@ -6,25 +6,28 @@
 
 .title-text{
     -fx-font: 20px Verdana;
-    -fx-fill: black;
+    -fx-fill: #0c0c0c;
     -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.3), 10, 0.7, 0.0, 0.0);
 }
 
 .btn{
+    -fx-min-width: 150;
+    -fx-font: 20px -apple-system;
     -fx-border-color:black;
     -fx-border-width: 2 2 2 2 ;
 }
 
+.btn:hover {
+    -fx-background-color: dodgerblue ;
+    -fx-text-fill: snow;
+}
 
 .start-btn:hover {
     -fx-background-color: lawngreen ;
-}
-.start-btn:hover .text{
-    -fx-text-fill: snow;
-}
 
+}
 
 .exit-btn:hover {
     -fx-background-color: red;
-    -fx-text-fill: snow;
 }
