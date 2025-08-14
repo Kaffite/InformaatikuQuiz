@@ -11,6 +11,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class MenuView {
 
     /**
@@ -18,7 +20,7 @@ public class MenuView {
      * @param stage main stage
      * @return New scene used for menu view
      */
-    public static Scene getScene(Stage stage) {
+    public static Scene getScene(Stage stage) throws IOException {
         BorderPane BPane = new BorderPane();
         Scene scene = Main.baseScene(BPane);
 
@@ -50,7 +52,7 @@ public class MenuView {
      */
     private static VBox btnBox(Stage stage) {
         VBox verticalBox = new VBox();
-        verticalBox.setPrefWidth(150);
+        verticalBox.setPrefWidth(200);
         verticalBox.setSpacing(20);
         double btnWidth = verticalBox.getPrefWidth();
 
@@ -58,7 +60,11 @@ public class MenuView {
         Button startBtn = new Button("Alusta Mängu");
         startBtn.getStyleClass().addAll("btn", "start-btn");
         startBtn.setOnMouseClicked(mouseEvent -> {
-            Main.showView(stage, GameView.getScene(stage), "Mäng" );
+            try {
+                Main.showView(stage, GameView.getScene(stage), "Mäng" );
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
         // Button: Go to settings
         Button settingsBtn = new Button("Seaded");

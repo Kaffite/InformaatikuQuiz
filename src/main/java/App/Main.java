@@ -6,9 +6,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Main extends Application {
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
         Scene menuScene = MenuView.getScene(stage);
         showView(stage, menuScene, "Milline informaatik sa oled?" );
     }
@@ -17,7 +19,7 @@ public class Main extends Application {
         launch();
     }
 
-    public static void showView(Stage stage, Scene scene, String title){
+    public static void showView(Stage stage, Scene scene, String title) {
         stage.setScene(scene);
         stage.setTitle(title);
         stage.show();

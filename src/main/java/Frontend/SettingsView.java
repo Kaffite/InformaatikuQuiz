@@ -10,6 +10,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 
 public class SettingsView {
 
@@ -35,7 +37,11 @@ public class SettingsView {
         Button returnBtn = new Button("Tagasi menüüsse");
         returnBtn.getStyleClass().addAll("btn");
         returnBtn.setOnMouseClicked(mouseEvent -> {
+            try {
                 Main.showView(stage, MenuView.getScene(stage), "Milline informaatik sa oled?");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
         VBox btnBox = new VBox(returnBtn);
         btnBox.setAlignment(Pos.CENTER);
