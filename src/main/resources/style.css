@@ -14,18 +14,17 @@
 .btn{
     -fx-min-width: 150;
     -fx-font: 20px -apple-system;
+    -fx-text-fill: black;
     -fx-border-color:black;
     -fx-border-width: 2 2 2 2 ;
 }
 
 .btn:hover {
     -fx-background-color: dodgerblue ;
-    -fx-text-fill: snow;
 }
 
 .start-btn:hover {
     -fx-background-color: lawngreen ;
-
 }
 
 .exit-btn:hover {
