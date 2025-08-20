@@ -20,7 +20,7 @@ Kasutan AI-d oma psühholoogina; C 2.0
 AI on hea, aga mina olen palju parem; T 0.5
 Annan talle valeinfot, et maailma tasakaalus hoida; V 1.0
 ---
-Mis sa paneksid muutuja nimeks, kui muutuja on minimaalse arvu hoidmiseks?
+Kuidas sa nimetaksid minimaalse arvu muutujat?
 "a"; C 0.25
 "skibidi"; V 0.5
 "minArv"; T 0.5
@@ -50,9 +50,9 @@ CoPilot on ainus, mida vaja; C 1.0
 Paber ja pliiats; V 1.0
 ---
 Milline Leiutajateküla Lotte tegelane sa oleksid?
-Lotte isa Oskar; T 0.5
 Lotte; T 1.0
 Bruno; C 1.0
+Oskar (Lotte isa); T 0.5
 Albert; V 0.5
 Kärbes Jaak; V 1.0
 Ma ei tea Lotte tegelasi; S 0.5
