@@ -20,6 +20,11 @@
     -fx-border-width: 2 2 2 2 ;
 }
 
+.btn-wide {
+    -fx-min-width: 500;
+    -fx-font: 18px -apple-system;
+}
+
 .btn:hover {
     -fx-background-color: dodgerblue ;
     -fx-font-weight: bold;

@@ -24,15 +24,7 @@ public class MenuView {
         BorderPane BPane = new BorderPane();
         Scene scene = Main.baseScene(BPane);
 
-        // Title text
-        Text filler = new Text(); // Filler text to set title to right position
-        Text title = new Text("Milline informaatik oled sina?");
-        title.getStyleClass().add("title-text");
-        //title.setId("title-text");
-        VBox titleBox = new VBox(50);
-        titleBox.getChildren().addAll(filler, title);
-        BPane.setTop(titleBox);
-        titleBox.setAlignment(Pos.TOP_CENTER);
+        VBox titleBox = View.titleBox("Milline informaatik oled sina?", BPane);
 
         // Vbox for Buttons
         VBox vBtnBox = btnBox(stage);
