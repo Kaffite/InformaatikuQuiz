@@ -1,4 +1,4 @@
-V; (V)abamõtleja - Sa pole mingisugune tavaline lihtsurelik, vaid mõtestad maailma lahti endale sobivalt. Sinu loovusel pole piire ning ka “kas” küsimustel on sinu arust lõpmatuseni palju erinevaid vastuseid. Oled tõeline innovaator.
-T; (T)ryhard - Sa oled küll väga tark, kuid arvad, et tead kõike ja pead ennast teistest paremaks. Kui sa pole tulevikus 10x engineer, siis sa vähemalt ise usud, et oled.
-C; (C)hatGPT kummardaja - Mitte keegi pole targem kui sinu ustav LLM. Arvad (loodad), et AI overlordid võtavad üle maailma ning seega proovid juba praegu saada nende soosingut.
-S; (S)tockholmi sündroomiga informaatik - Sisendad endale pidevalt, et sa armastad IT-d, kuid see tegelikult ei meeldi sulle. Ilmselt varsti vahetad eriala ja lähed midagi endale meeldivamat õppima.
+V; (V)abamotleja - Sa pole mingisugune tavaline lihtsurelik, vaid motestad maailma lahti endale sobivalt. Sinu loovusel pole piire ning ka 'kas' kusimustel on sinu arust lopmatuseni palju erinevaid vastuseid. Oled toeline innovaator.
+T; (T)ryhard - Sa oled kull vaga tark, kuid arvad, et tead koike ja pead ennast teistest paremaks. Kui sa pole tulevikus 10x engineer, siis sa vahemalt ise usud, et oled.
+C; (C)hatGPT kummardaja - Mitte keegi pole targem kui sinu ustav LLM. Arvad (loodad), et AI overlordid votavad ule maailma ning seega proovid juba praegu voita nende soosingut.
+S; (S)tockholmi sundroomiga informaatik - Sisendad endale pidevalt, et sa armastad IT-d, kuid see tegelikult ei meeldi sulle. Ilmselt varsti vahetad eriala ja lähed midagi endale meeldivamat oppima.

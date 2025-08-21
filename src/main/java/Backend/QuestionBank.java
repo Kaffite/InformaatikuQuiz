@@ -95,25 +95,6 @@ public class QuestionBank {
         return question;
     }
 
-    /**
-     *  Function:
-     *  1) Matches each choice option with a number
-     *  2) prints the text of question option and corresponding number
-     *  3) returns a hashmap of option choices:
-     *       key   = number (of the option)
-     *       value = text (of the option)
-     * @param question the question that is being asked at the moment
-     * @return Hashmap with all the choice options
-     */
-    public HashMap answers(Question question){
-        HashMap answerOptions = question.getAnswerValues();
-        int i = 0;
-        HashMap<Integer, String> questionAnswer = new HashMap<>();
-        for (Object key : answerOptions.keySet()) {
-            i++;
-            System.out.println(i + ") " +  key);
-            questionAnswer.put(i, key.toString());
-        }
-        return questionAnswer;
-    }
+
+
 }

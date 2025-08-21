@@ -24,5 +24,25 @@ public class Points {
         }
     }
 
+    /**
+     * Function: Finds the student types (marked with Character) with the most points
+     * @return Arraylist of Characters (types) with the most points
+     */
+    public ArrayList<Character> MostPointsTypes(){
+        ArrayList<Character> results = new ArrayList<>();
+        double max = 0;
+        for (Character c : points.keySet()) {
+            double typePoints = points.get(c);
+            if( max < typePoints){
+                max = typePoints;
+                results.clear();
+                results.add(c);
+            } else if (max == typePoints){
+                results.add(c);
+            }
+        }
+        return results;
+    }
+
 
 }

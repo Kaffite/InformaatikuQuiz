@@ -12,12 +12,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
+// View for quiz settings
 public class SettingsView {
 
     public static Scene getScene(Stage stage) {
         BorderPane BPane = new BorderPane();
-        Scene scene = Main.baseScene(BPane);
+        Scene scene = View.baseScene(BPane);
 
         // Text
         VBox verticalBox = new VBox();

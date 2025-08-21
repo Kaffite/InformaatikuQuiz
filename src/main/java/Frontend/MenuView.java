@@ -6,13 +6,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+// Main menu view
 public class MenuView {
 
     /**
@@ -22,7 +20,7 @@ public class MenuView {
      */
     public static Scene getScene(Stage stage) throws IOException {
         BorderPane BPane = new BorderPane();
-        Scene scene = Main.baseScene(BPane);
+        Scene scene = View.baseScene(BPane);
 
         VBox titleBox = View.titleBox("Milline informaatik oled sina?", BPane);
 
