@@ -81,45 +81,55 @@ public class GameView {
 
     /**
      * Function: Displays the results (points + type descriptions for the types with most points)
-     * @param points
-     * @param BPane
-     * @param desc
+     * @param points instance - used to hold and add points
+     * @param BPane scene root
+     * @param desc instance - used to hold all the type descriptions
      */
     private static void displayResults(Points points, BorderPane BPane, Descriptions desc) {
         VBox titleBox = View.titleBox("Tulemused:", BPane);
+        VBox centerBox = new VBox(10, new Text()); // contains type-description VBox and type-points vBox
+        BPane.setCenter(centerBox);
+
+        HashMap symbolToType = desc.getTypes();
 
         // Displays descriptions
-        VBox resultBox = new VBox(3);
+        VBox resultBox = new VBox(5);
         ArrayList<Character> resultTypes = points.MostPointsTypes();
         HashMap descMap = desc.getDescriptions();
         for (Character resultType : resultTypes) {
-            String[] typeAndDesc = ((String) descMap.get(resultType)).split("\\.");
-            for (int i = 0; i < typeAndDesc.length; i++){
-                String line = typeAndDesc[i];
+            // Text for the type
+            String type = (String) symbolToType.get(resultType);
+            Text typeText = new Text(type + ":");
+            typeText.getStyleClass().add("results-text");
+            resultBox.getChildren().add(typeText);
+            // Text for the description of the type
+            String[] descLines = ((String) descMap.get(resultType)).split("\\.");
+            for (int i = 0; i < descLines.length; i++){
+                String line = descLines[i];
                 Text descText = new Text(line);
                 descText.getStyleClass().add("results-text");
                 resultBox.getChildren().add(descText);
             }
+            // To position type-desc text correctly in case there is more than one:
+            resultBox.getChildren().add(new Text());
         }
-        resultBox.setAlignment(Pos.TOP_CENTER);
-        BPane.setCenter(resultBox);
-
+        resultBox.setAlignment(Pos.CENTER);
+        centerBox.getChildren().add(resultBox);
 
         // How many points for what type
         HashMap results = points.getPoints();
-        HashMap symbolToType = desc.getTypes();
         VBox typePointsBox = new VBox(10, new Text());
+        Text pointTitle = new Text("Sinu punktid:");
+        pointTitle.getStyleClass().add("results-text");
+        typePointsBox.getChildren().add(pointTitle);
         for (Object symbol: results.keySet()){
             String type = (String) symbolToType.get(symbol);
             Double symbolPoints = (Double) results.get(symbol);
             Text typePoints = new Text(type + " - " + symbolPoints);
             typePoints.getStyleClass().add("results-text");
             typePointsBox.getChildren().add(typePoints);
-            System.out.println(type + " " + symbolPoints);
         }
-        typePointsBox.setAlignment(Pos.TOP_CENTER);
-        BPane.setBottom(typePointsBox);
-
+        typePointsBox.setAlignment(Pos.CENTER);
+        centerBox.getChildren().add(typePointsBox);
     }
-
 }
