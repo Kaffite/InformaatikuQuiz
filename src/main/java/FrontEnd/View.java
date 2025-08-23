@@ -1,4 +1,4 @@
-package Frontend;
+package FrontEnd;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

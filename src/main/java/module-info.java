@@ -2,7 +2,7 @@ module io.github.kaffite.informaatikuquiz.informaatikuquiz {
     requires javafx.controls;
 
 
-    exports Backend;
+    exports BackEnd;
     exports App;
-    exports Frontend;
+    exports FrontEnd;
 }

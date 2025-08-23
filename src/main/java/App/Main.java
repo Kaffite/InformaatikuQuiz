@@ -1,6 +1,6 @@
 package App;
 
-import Frontend.MenuView;
+import FrontEnd.MenuView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

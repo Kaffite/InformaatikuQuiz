@@ -1,4 +1,4 @@
-package Backend;
+package BackEnd;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -35,8 +35,7 @@ public class Descriptions {
      */
     private HashMap<Character, String> readDescriptions(String filename) throws IOException {
         descriptions = new HashMap<>();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader
-                (new FileInputStream(filename), StandardCharsets.UTF_8))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))){
                 String line;
                 while ((line = br.readLine()) != null) {
                 String[] parts = line.split(";");
@@ -49,7 +48,6 @@ public class Descriptions {
                 types.put(symbol, type);
             }
         }
-        System.out.println(descriptions.toString());
         return descriptions;
     }
 }

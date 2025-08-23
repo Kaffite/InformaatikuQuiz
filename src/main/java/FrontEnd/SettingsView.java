@@ -1,4 +1,4 @@
-package Frontend;
+package FrontEnd;
 
 
 import App.Main;

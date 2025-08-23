@@ -1,9 +1,9 @@
-package Frontend;
+package FrontEnd;
 
-import Backend.Descriptions;
-import Backend.Points;
-import Backend.Question;
-import Backend.QuestionBank;
+import BackEnd.Descriptions;
+import BackEnd.Points;
+import BackEnd.Question;
+import BackEnd.QuestionBank;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
