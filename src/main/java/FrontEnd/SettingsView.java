@@ -29,7 +29,7 @@ public class SettingsView {
                 "Ära tegele lollustega, mine tee parem see quiz ära."};
         for (int i = 0; i < messages.length; i++){
             Text text = new Text(messages[i].toString());
-            text.getStyleClass().add("title-text");
+            text.getStyleClass().add("h1");
             verticalBox.getChildren().add(text);
         }
 

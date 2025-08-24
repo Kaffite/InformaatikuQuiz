@@ -17,7 +17,7 @@ public class View {
     public static Scene baseScene(BorderPane Bpane){
         Scene scene =  new Scene(Bpane, 800, 600);
         scene.getStylesheets().add("style.css");
-        Bpane.setId("normal-background");
+        Bpane.setId("body");
         return scene;
     }
 
@@ -31,7 +31,7 @@ public class View {
     public static VBox titleBox (String titleString, BorderPane BPane){
         // Title text
         Text title = new Text(titleString);
-        title.getStyleClass().add("title-text");
+        title.getStyleClass().add("h1");
         VBox titleBox = new VBox(50, new Text(), title);
         BPane.setTop(titleBox);
         titleBox.setAlignment(Pos.TOP_CENTER);

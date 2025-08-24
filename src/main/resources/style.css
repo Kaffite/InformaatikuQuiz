@@ -1,23 +1,24 @@
 
-#normal-background {
-    -fx-background-color: #96bae4;
+#body {
+    -fx-background-color: #1e1e1e;
 }
 
 
-.title-text{
+.h1{
     -fx-font: 20px Verdana;
-    -fx-fill: #0c0c0c;
+    -fx-fill: white;
     -fx-font-weight: bold;
     -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.3), 10, 0.7, 0.0, 0.0);
 }
 
 .results-text{
     -fx-font: 14px Verdana;
-    -fx-fill: #0c0c0c;
+    -fx-fill: white;
     -fx-font-weight: bold;
 }
 
 .btn{
+    -fx-background-color: ivory ;
     -fx-min-width: 200;
     -fx-font: 20px -apple-system;
     -fx-text-fill: black;
@@ -25,20 +26,21 @@
     -fx-border-width: 2 2 2 2 ;
 }
 
+.btn:hover {
+    -fx-background-color: cornflowerblue  ;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
 .btn-wide {
     -fx-min-width: 500;
     -fx-font: 18px -apple-system;
 }
 
-.btn:hover {
-    -fx-background-color: dodgerblue ;
-    -fx-font-weight: bold;
-}
-
 .start-btn:hover {
-    -fx-background-color: lawngreen ;
+    -fx-background-color: forestgreen ;
 }
 
 .exit-btn:hover {
-    -fx-background-color: red;
+    -fx-background-color: crimson ;
 }
