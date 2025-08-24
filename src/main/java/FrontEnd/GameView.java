@@ -21,7 +21,7 @@ public class GameView {
 
     public static Scene getScene(Stage stage) throws IOException {
         BorderPane BPane = new BorderPane();
-        Scene scene = View.baseScene(BPane);
+        Scene scene = View.baseScene(BPane, "body");
 
         Descriptions descriptions = new Descriptions("src/main/resources/Descriptions.txt");
         QuestionBank bank = bank = new QuestionBank("src/main/resources/Questions.txt");
@@ -100,14 +100,14 @@ public class GameView {
             // Text for the type
             String type = (String) symbolToType.get(resultType);
             Text typeText = new Text(type + ":");
-            typeText.getStyleClass().add("results-text");
+            typeText.getStyleClass().add("h2");
             resultBox.getChildren().add(typeText);
             // Text for the description of the type
             String[] descLines = ((String) descMap.get(resultType)).split("\\.");
             for (int i = 0; i < descLines.length; i++){
                 String line = descLines[i];
                 Text descText = new Text(line);
-                descText.getStyleClass().add("results-text");
+                descText.getStyleClass().add("h2");
                 resultBox.getChildren().add(descText);
             }
             // To position type-desc text correctly in case there is more than one:
@@ -120,13 +120,13 @@ public class GameView {
         HashMap results = points.getPoints();
         VBox typePointsBox = new VBox(10, new Text());
         Text pointTitle = new Text("Sinu punktid:");
-        pointTitle.getStyleClass().add("results-text");
+        pointTitle.getStyleClass().add("h2");
         typePointsBox.getChildren().add(pointTitle);
         for (Object symbol: results.keySet()){
             String type = (String) symbolToType.get(symbol);
             Double symbolPoints = (Double) results.get(symbol);
             Text typePoints = new Text(type + " - " + symbolPoints);
-            typePoints.getStyleClass().add("results-text");
+            typePoints.getStyleClass().add("h2");
             typePointsBox.getChildren().add(typePoints);
         }
         typePointsBox.setAlignment(Pos.CENTER);

@@ -1,8 +1,11 @@
 
 #body {
-    -fx-background-color: #1e1e1e;
+    -fx-background-color: thistle;
 }
 
+#colors-bg{
+    -fx-background-image: url("CityBackground.png");
+}
 
 .h1{
     -fx-font: 20px Verdana;
@@ -10,10 +13,13 @@
     -fx-font-weight: bold;
     -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.3), 10, 0.7, 0.0, 0.0);
 }
+.h1-dark{
+    -fx-fill: black;
+}
 
-.results-text{
+.h2{
     -fx-font: 14px Verdana;
-    -fx-fill: white;
+    -fx-fill: black;
     -fx-font-weight: bold;
 }
 

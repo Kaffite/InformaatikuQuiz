@@ -19,7 +19,7 @@ public class SettingsView {
 
     public static Scene getScene(Stage stage) {
         BorderPane BPane = new BorderPane();
-        Scene scene = View.baseScene(BPane);
+        Scene scene = View.baseScene(BPane, "colors-bg");
 
         VBox verticalBox = new VBox(120, new Text()); // VBox for text and Button
         verticalBox.setAlignment(Pos.TOP_CENTER);

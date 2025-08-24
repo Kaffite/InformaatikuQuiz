@@ -20,9 +20,10 @@ public class MenuView {
      */
     public static Scene getScene(Stage stage) throws IOException {
         BorderPane BPane = new BorderPane();
-        Scene scene = View.baseScene(BPane);
+        Scene scene = View.baseScene(BPane, "colors-bg");
 
         VBox titleBox = View.titleBox("Milline informaatik oled sina?", BPane);
+        titleBox.getStyleClass().add("h1-dark");
 
         // Vbox for Buttons
         VBox vBtnBox = btnBox(stage);

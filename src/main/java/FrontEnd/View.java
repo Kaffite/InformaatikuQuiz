@@ -14,10 +14,10 @@ public class View {
      * @param Bpane new BorderPane that every view will use (instead of creating own Bpane)
      * @return Basic scene that has 'style.css' as a stylesheet and a background
      */
-    public static Scene baseScene(BorderPane Bpane){
+    public static Scene baseScene(BorderPane Bpane, String bgID){
         Scene scene =  new Scene(Bpane, 800, 600);
         scene.getStylesheets().add("style.css");
-        Bpane.setId("body");
+        Bpane.setId(bgID);
         return scene;
     }
 
