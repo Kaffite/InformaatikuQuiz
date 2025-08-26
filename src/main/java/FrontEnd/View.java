@@ -15,7 +15,7 @@ public class View {
      * @return Basic scene that has 'style.css' as a stylesheet and a background
      */
     public static Scene baseScene(BorderPane Bpane, String bgID){
-        Scene scene =  new Scene(Bpane, 800, 600);
+        Scene scene =  new Scene(Bpane, 1280, 800);
         scene.getStylesheets().add("style.css");
         Bpane.setId(bgID);
         return scene;

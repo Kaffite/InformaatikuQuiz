@@ -4,8 +4,10 @@ import BackEnd.Descriptions;
 import BackEnd.Points;
 import BackEnd.Question;
 import BackEnd.QuestionBank;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -76,6 +78,8 @@ public class GameView {
             });
             answerBox.getChildren().add(button);
         }
+
+
         BPane.setCenter(answerBox);
     }
 
@@ -131,5 +135,17 @@ public class GameView {
         }
         typePointsBox.setAlignment(Pos.CENTER);
         centerBox.getChildren().add(typePointsBox);
+
+        // Button for exiting the quiz after completing it
+        Button exitBtn = new Button("Välju");
+        VBox exitBox = new VBox(30, new Text(), exitBtn);
+        exitBtn.getStyleClass().addAll("btn", "exit-btn");
+        exitBtn.setOnMouseClicked(Mousevent ->  {
+            System.exit(0);
+        });
+        exitBox.setAlignment(Pos.TOP_CENTER);
+        centerBox.getChildren().add(exitBox);
+
+
     }
 }
