@@ -30,7 +30,7 @@ Muutujate kasutamine on amatööridele; V 2.0
 Kes on informaatiku suurim looduslik kiskja?
 Koduülesanded; S 1.5
 Muru; T 0.5
-Chat GPT uuema versiooni tasuta limiit; C 2.0
+ChatGPT uuema versiooni tasuta limiit; C 2.0
 Light mode; T 0.5
 Informaatikul pole vaenlasi, kõik on semud; V 1.0
 ---
