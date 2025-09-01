@@ -2,17 +2,17 @@ Mis värvi sa kõige rohkem kardad?
 Roheline; T 1.0
 Sinine; T 1.0
 Must; S 0.5
-punane; T 1.0
+Punane; T 1.0
 Ma ei karda värve; C 1.0
 Kõiki värve; V 1.0
 ---
 Kas jah voi ei?
 Jah; C 0.25
-ei; C 0.25
+Ei; C 0.25
 Oot, küsin Claudelt; C 1.0
 Võib-olla; V 1.0
 Ma ei vasta sellele küsimusele; T 1.0
-Bro IDK; S 1.5
+Broski IDK; S 1.5
 ---
 Mis sa arvad AI-st?
 Ta teeb asju; S 1.5
@@ -25,7 +25,7 @@ Kuidas sa nimetaksid minimaalse arvu muutujat?
 "skibidi"; V 0.5
 "minArv"; T 0.5
 Mis seal vahet on, muutuja on muutuja; S 1.5
-muutujate kasutamine on amatööridele; V 2.0
+Muutujate kasutamine on amatööridele; V 2.0
 ---
 Kes on informaatiku suurim looduslik kiskja?
 Koduülesanded; S 1.5
@@ -63,6 +63,7 @@ Kohv on nõrkadele; V 0.5
 Joon ainult perfektselt valmistatud kohvi; T 1.0
 Järan kohviube, nagu tõeline OG; V 1.5
 Kohv on soliidne 7/10; C 1.0
+Joon kohvi laadset toodet; T 0.25
 ---
 Kes võidaks võitluse, kas miljard lõvi või päike?
 Lõvid kavaldaks päikese üle; V 0.5
