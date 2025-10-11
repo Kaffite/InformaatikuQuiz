@@ -1,4 +1,4 @@
-# IT student Quiz
+# IT Student Quiz
 
 ## How to play
 <p> Complete the quiz to find out what type of IT student you are. To start the quiz, run the class 'main' under the package 'App'. <p>
