@@ -45,7 +45,6 @@ public class MenuView {
         VBox verticalBox = new VBox();
         verticalBox.setPrefWidth(200);
         verticalBox.setSpacing(20);
-        double btnWidth = verticalBox.getPrefWidth();
 
         // Button: Start the quiz
         Button startBtn = new Button("Alusta Mängu");
@@ -61,7 +60,11 @@ public class MenuView {
         Button settingsBtn = new Button("Seaded");
         settingsBtn.getStyleClass().add("btn");
         settingsBtn.setOnMouseClicked(MouseEvent -> {
-            Main.showView(stage, SettingsView.getScene(stage), "Seaded??");
+            try {
+                Main.showView(stage, SettingsView.getScene(stage), "Seaded??");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
         // Button: Close the application
         Button exitBtn = new Button("Välju");

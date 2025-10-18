@@ -16,8 +16,8 @@ public class QuestionBank {
     ArrayList<Question> questionList = new ArrayList<>();
     HashMap<Character, Double> pointMap = new HashMap<>();
 
-    public QuestionBank(String filename) throws IOException {
-        this.questionList = readFromFile(filename);
+    public QuestionBank(String path) throws IOException {
+        this.questionList = readFromFile(path);
     }
 
     public ArrayList<Question> getQuestionList() {
@@ -30,12 +30,12 @@ public class QuestionBank {
 
     /**
      * Function: Reads Questions (and possible answers to the questions) from a .txt file
-     * @param filename the name of the .txt file
+     * @param path to the .txt file
      * @return Arraylist that contains Questions (Backend.Question format defined in class 'Backend.Question')
      * @throws IOException
      */
-    private ArrayList<Question> readFromFile(String filename) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+    private ArrayList<Question> readFromFile(String path) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String questionText = "";
             String line;
             // String = optionText, Hashmap = how many points for what type

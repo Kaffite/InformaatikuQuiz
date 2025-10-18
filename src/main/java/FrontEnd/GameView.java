@@ -4,16 +4,13 @@ import BackEnd.Descriptions;
 import BackEnd.Points;
 import BackEnd.Question;
 import BackEnd.QuestionBank;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.chart.BarChart;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,9 +21,8 @@ public class GameView {
     public static Scene getScene(Stage stage) throws IOException {
         BorderPane BPane = new BorderPane();
         Scene scene = View.baseScene(BPane, "body");
-
-        Descriptions descriptions = new Descriptions("src/main/resources/Descriptions.txt");
-        QuestionBank bank = bank = new QuestionBank("src/main/resources/Questions.txt");
+        Descriptions descriptions = new Descriptions("src/main/resources/TextFiles/DescriptionsEST.txt");
+        QuestionBank bank = bank = new QuestionBank("src/main/resources/TextFiles/QuestionsEST.txt");
         Points points = new Points(bank.getPointMap());
         askQuestion(bank, points, BPane, descriptions);
 
@@ -93,7 +89,6 @@ public class GameView {
         VBox titleBox = View.titleBox("Tulemused:", BPane);
         VBox centerBox = new VBox(10, new Text()); // contains type-description VBox and type-points vBox
         BPane.setCenter(centerBox);
-
         HashMap symbolToType = desc.getTypes();
 
         // Displays descriptions

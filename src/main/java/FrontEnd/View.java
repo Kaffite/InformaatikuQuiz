@@ -1,5 +1,6 @@
 package FrontEnd;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -23,7 +24,6 @@ public class View {
 
     /**
      * Method for creating VBox that contains title.
-     * This method exists to prevent code duplication.
      * @param titleString the text for the title
      * @param BPane BorderPane where the title will be set
      * @return vertical Box that contains the text at the right position
@@ -32,7 +32,8 @@ public class View {
         // Title text
         Text title = new Text(titleString);
         title.getStyleClass().add("h1");
-        VBox titleBox = new VBox(50, new Text(), title);
+        VBox titleBox = new VBox(title);
+        VBox.setMargin(title, new Insets(50, 0, 0, 0) );
         BPane.setTop(titleBox);
         titleBox.setAlignment(Pos.TOP_CENTER);
         return titleBox;

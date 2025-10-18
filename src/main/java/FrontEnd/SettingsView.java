@@ -2,6 +2,8 @@ package FrontEnd;
 
 
 import App.Main;
+import BackEnd.Settings;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -9,32 +11,28 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 // View for quiz settings
 public class SettingsView {
 
-    public static Scene getScene(Stage stage) {
+    public static Scene getScene(Stage stage) throws IOException{
         BorderPane BPane = new BorderPane();
         Scene scene = View.baseScene(BPane, "colors-bg");
 
-        VBox verticalBox = new VBox(120, new Text()); // VBox for text and Button
+        // VBox for text and Button
+        VBox verticalBox = new VBox(300);
         verticalBox.setAlignment(Pos.TOP_CENTER);
         BPane.setCenter(verticalBox);
 
-        // Text
-        String[] arrayMessages = {
-                "Miks sa siin oled?",
-                "Mis seaded sellel quiz-il olema peaks?",
-                "Ära tegele lollustega, mine tee parem see quiz ära."};
-        // Arraylist of messages that are displayed after going to SettingsView:
-        ArrayList<String> messages = new ArrayList<>(Arrays.asList(arrayMessages));
+        // Messages that are displayed in the settings screen (minor easter egg)
+        Settings settings = new Settings("SettingsEST.txt");
+        ArrayList<String> messages = settings.getSettingMessages();
         Text text = new Text(messages.removeFirst());
         text.getStyleClass().add("h1");
         verticalBox.getChildren().add(text);
+        VBox.setMargin(text, new Insets(120, 0, 0, 0));
 
         // Button
         Button returnBtn = new Button("Edasi");

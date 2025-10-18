@@ -19,7 +19,7 @@ Main extends Application {
         launch();
     }
 
-    public static void showView(Stage stage, Scene scene, String title) {
+    public static void showView(Stage stage, Scene scene, String title){
         stage.setScene(scene);
         stage.setTitle(title);
         stage.show();
