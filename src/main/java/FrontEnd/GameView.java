@@ -21,8 +21,8 @@ public class GameView {
     public static Scene getScene(Stage stage) throws IOException {
         BorderPane BPane = new BorderPane();
         Scene scene = View.baseScene(BPane, "body");
-        Descriptions descriptions = new Descriptions("src/main/resources/TextFiles/DescriptionsEST.txt");
-        QuestionBank bank = bank = new QuestionBank("src/main/resources/TextFiles/QuestionsEST.txt");
+        Descriptions descriptions = new Descriptions("/textFiles/DescriptionsEST.txt");
+        QuestionBank bank = bank = new QuestionBank("/textFiles/QuestionsEST.txt");
         Points points = new Points(bank.getPointMap());
         askQuestion(bank, points, BPane, descriptions);
 

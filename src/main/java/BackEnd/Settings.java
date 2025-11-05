@@ -1,8 +1,6 @@
 package BackEnd;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Settings {
@@ -13,8 +11,9 @@ public class Settings {
     }
 
     private static ArrayList<String> readSettingMsgs(String path) throws IOException {
+        InputStream inputStream = Settings.class.getResourceAsStream(path);
         ArrayList<String> messages = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(path))){
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
             while ((line = br.readLine()) != null){
                 messages.add(line);

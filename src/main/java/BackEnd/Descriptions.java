@@ -1,7 +1,7 @@
 package BackEnd;
 
 import java.io.*;
-import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 /*
@@ -27,15 +27,16 @@ public class Descriptions {
 
     /**
      * Function: Reads the descriptions for each student type from a .txt file
-     * @param filename The name of the .txt file
+     * @param path path to the file
      * @return Hashmap:
      *      key - Symbol (acronym) of the type
      *      value - Description of the type
      * @throws IOException
      */
-    private HashMap<Character, String> readDescriptions(String filename) throws IOException {
+    private HashMap<Character, String> readDescriptions(String path) throws IOException {
         descriptions = new HashMap<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))){
+        InputStream inputStream = this.getClass().getResourceAsStream(path);
+        try (BufferedReader br = new BufferedReader((new InputStreamReader(inputStream, StandardCharsets.UTF_8)))){
                 String line;
                 while ((line = br.readLine()) != null) {
                 String[] parts = line.split(";");

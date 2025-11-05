@@ -27,7 +27,7 @@ public class SettingsView {
         BPane.setCenter(verticalBox);
 
         // Messages that are displayed in the settings screen (minor easter egg)
-        Settings settings = new Settings("SettingsEST.txt");
+        Settings settings = new Settings("/textFiles/SettingsEST.txt");
         ArrayList<String> messages = settings.getSettingMessages();
         Text text = new Text(messages.removeFirst());
         text.getStyleClass().add("h1");

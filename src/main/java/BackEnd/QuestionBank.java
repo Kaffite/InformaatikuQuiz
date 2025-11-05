@@ -1,8 +1,6 @@
 package BackEnd;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -35,10 +33,12 @@ public class QuestionBank {
      * @throws IOException
      */
     private ArrayList<Question> readFromFile(String path) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+        InputStream inputStream = this.getClass().getResourceAsStream(path);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String questionText = "";
             String line;
-            // String = optionText, Hashmap = how many points for what type
+            // String = The text for the option
+            // Hashmap = how are points added if the option is clicked
             HashMap<String, HashMap<Character, Double>> answerValues = new HashMap<>();
             while (true){
                 line = br.readLine();
