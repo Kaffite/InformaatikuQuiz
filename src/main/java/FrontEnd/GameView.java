@@ -4,6 +4,7 @@ import BackEnd.Descriptions;
 import BackEnd.Points;
 import BackEnd.Question;
 import BackEnd.QuestionBank;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,7 +40,7 @@ public class GameView {
      * @param desc instance - used to hold all the type descriptions
      */
     private static void askQuestion(QuestionBank bank, Points points, BorderPane BPane, Descriptions desc){
-        VBox answerBox = new VBox(15, new Text());
+        VBox answerBox = new VBox(15);
         answerBox.setAlignment(Pos.BASELINE_CENTER);
 
         // Displays the question text:
@@ -73,6 +74,7 @@ public class GameView {
                 }
             });
             answerBox.getChildren().add(button);
+            VBox.setMargin(button, new Insets(15, 0, 0, 0));
         }
 
 
@@ -87,7 +89,7 @@ public class GameView {
      */
     private static void displayResults(Points points, BorderPane BPane, Descriptions desc) {
         VBox titleBox = View.titleBox("Tulemused:", BPane);
-        VBox centerBox = new VBox(10, new Text()); // contains type-description VBox and type-points vBox
+        VBox centerBox = new VBox(10); // contains type-description VBox and type-points vBox
         BPane.setCenter(centerBox);
         HashMap symbolToType = desc.getTypes();
 
@@ -101,6 +103,7 @@ public class GameView {
             Text typeText = new Text(type + ":");
             typeText.getStyleClass().add("h2");
             resultBox.getChildren().add(typeText);
+            VBox.setMargin(typeText, new Insets(10, 0, 0, 0));
             // Text for the description of the type
             String[] descLines = ((String) descMap.get(resultType)).split("\\.");
             for (int i = 0; i < descLines.length; i++){
@@ -109,18 +112,18 @@ public class GameView {
                 descText.getStyleClass().add("h2");
                 resultBox.getChildren().add(descText);
             }
-            // To position type-desc text correctly in case there is more than one:
-            resultBox.getChildren().add(new Text());
         }
         resultBox.setAlignment(Pos.CENTER);
         centerBox.getChildren().add(resultBox);
+        VBox.setMargin(resultBox, new Insets(20, 0, 0, 0));
 
         // How many points for what type
         HashMap results = points.getPoints();
-        VBox typePointsBox = new VBox(10, new Text());
+        VBox typePointsBox = new VBox(10);
         Text pointTitle = new Text("Sinu punktid:");
         pointTitle.getStyleClass().add("h2");
         typePointsBox.getChildren().add(pointTitle);
+        VBox.setMargin(pointTitle, new Insets(10, 0, 0, 0));
         for (Object symbol: results.keySet()){
             String type = (String) symbolToType.get(symbol);
             Double symbolPoints = (Double) results.get(symbol);
@@ -133,7 +136,8 @@ public class GameView {
 
         // Button for exiting the quiz after completing it
         Button exitBtn = new Button("Välju");
-        VBox exitBox = new VBox(30, new Text(), exitBtn);
+        VBox exitBox = new VBox(30, exitBtn);
+        VBox.setMargin(exitBtn, new Insets(30, 0, 0, 0));
         exitBtn.getStyleClass().addAll("btn", "exit-btn");
         exitBtn.setOnMouseClicked(Mousevent ->  {
             System.exit(0);

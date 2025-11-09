@@ -6,7 +6,7 @@ Punane; T 1.0
 Ma ei karda värve; C 1.0
 Kõiki värve; V 1.0
 ---
-Kas jah voi ei?
+Kas jah või ei?
 Jah; C 0.25
 Ei; C 0.25
 Oot, küsin Claudelt; C 1.0
@@ -52,8 +52,9 @@ Paber ja pliiats; V 1.0
 Milline Leiutajateküla Lotte tegelane sa oleksid?
 Lotte; T 1.0
 Bruno; C 1.0
-Oskar (Lotte isa); T 0.5
 Albert; V 0.5
+Oskar (Lotte isa); T 0.5
+Portfelliga jänes; V 1.5
 Kärbes Jaak; V 1.0
 Ma ei tea Lotte tegelasi; S 0.5
 ---

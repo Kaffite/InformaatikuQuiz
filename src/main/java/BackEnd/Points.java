@@ -7,7 +7,7 @@ import java.util.*;
     2) Adds points to the types, based on user's answers
  */
 public class Points {
-    HashMap<Character, Double> points;
+    private HashMap<Character, Double> points;
 
     public Points(HashMap defaultPointMap) {
         points = defaultPointMap;

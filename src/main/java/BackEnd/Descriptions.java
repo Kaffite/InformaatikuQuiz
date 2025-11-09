@@ -10,8 +10,8 @@ import java.util.HashMap;
     2) Contains description and type names for each student type
  */
 public class Descriptions {
-    HashMap<Character, String> descriptions; // Symbol, type name and description
-    HashMap<Character, String> types = new HashMap<>(); // Symbol, Type name
+    private HashMap<Character, String> descriptions = new HashMap<>(); // Symbol, type name and description
+    private HashMap<Character, String> types = new HashMap<>(); // Symbol, Type name
 
     public Descriptions(String filename) throws IOException {
         descriptions = readDescriptions(filename);
@@ -34,7 +34,6 @@ public class Descriptions {
      * @throws IOException
      */
     private HashMap<Character, String> readDescriptions(String path) throws IOException {
-        descriptions = new HashMap<>();
         InputStream inputStream = this.getClass().getResourceAsStream(path);
         try (BufferedReader br = new BufferedReader((new InputStreamReader(inputStream, StandardCharsets.UTF_8)))){
                 String line;

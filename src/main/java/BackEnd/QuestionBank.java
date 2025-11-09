@@ -1,6 +1,7 @@
 package BackEnd;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,8 +12,8 @@ import java.util.HashMap;
     3) Ask questions in a random order and display the answer options and corresponding numbers
 */
 public class QuestionBank {
-    ArrayList<Question> questionList = new ArrayList<>();
-    HashMap<Character, Double> pointMap = new HashMap<>();
+    private ArrayList<Question> questionList = new ArrayList<>();
+    private HashMap<Character, Double> pointMap = new HashMap<>();
 
     public QuestionBank(String path) throws IOException {
         this.questionList = readFromFile(path);
@@ -34,7 +35,7 @@ public class QuestionBank {
      */
     private ArrayList<Question> readFromFile(String path) throws IOException {
         InputStream inputStream = this.getClass().getResourceAsStream(path);
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
             String questionText = "";
             String line;
             // String = The text for the option
@@ -49,7 +50,6 @@ public class QuestionBank {
                     break;
                 } else if (line.contains(";")) {// line = question option
                     addAnswer(answerValues, line); // Adds answer to HashMap
-
                 } else { //  line = Backend.Question text
                     if (questionText.equals("")) questionText = line;
                     else { // next question
