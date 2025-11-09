@@ -11,10 +11,10 @@
 ## Screenshots
 
 ### Menu
-<img width="1082" height="802" alt="Image" src="https://github.com/user-attachments/assets/a8d8bc9e-d09c-4986-a4b4-a86dd2812337" />
+<img width="1108" height="866" alt="Image" src="https://github.com/user-attachments/assets/d91a4151-75bc-47fa-b623-e86765ddfb2e" />
 
 ### Question
-<img width="1082" height="802" alt="Image" src="https://github.com/user-attachments/assets/92c17460-4a92-4811-82d9-3dcc72f84a62" />
+<img width="1108" height="866" alt="Image" src="https://github.com/user-attachments/assets/cacaf911-f3ea-4a53-a83b-9ffb325d17f3" />
 
 ### Results
-<img width="1082" height="802" alt="Image" src="https://github.com/user-attachments/assets/707ed7a8-083c-4f30-b735-3f03b4f677a0" />
+<img width="1108" height="866" alt="Image" src="https://github.com/user-attachments/assets/dea7c8e8-55ea-4153-8d93-0aa0201400f3" />
