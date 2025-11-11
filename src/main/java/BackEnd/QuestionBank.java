@@ -40,23 +40,15 @@ public class QuestionBank {
             String line;
             // String = The text for the option
             // Hashmap = how are points added if the option is clicked
-            HashMap<String, HashMap<Character, Double>> answerValues = new HashMap<>();
-            while (true){
-                line = br.readLine();
-                if (line.equals("---")) {
-                    continue;
-                }else if (line.equals("")){
-                    questionList.add(new Question(questionText, answerValues));
-                    break;
-                } else if (line.contains(";")) {// line = question option
-                    addAnswer(answerValues, line); // Adds answer to HashMap
-                } else { //  line = Backend.Question text
-                    if (questionText.equals("")) questionText = line;
-                    else { // next question
-                        questionList.add(new Question(questionText, answerValues));
-                        answerValues = new HashMap<>(); // clears Hashmap for next question
+            HashMap<String, HashMap<Character, Double>> choiceMap = new HashMap<>();
+            while ((line = br.readLine()) != null){
+                if (line.equals("---")) { // Question is read, add it to List
+                    questionList.add(new Question(questionText, choiceMap));
+                    choiceMap = new HashMap<>();
+                } else if (line.contains(";")) { // line = question option
+                    addAnswer(choiceMap, line);
+                } else { // line = question text
                         questionText = line;
-                    }
                 }
             }
         }

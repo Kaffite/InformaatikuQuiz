@@ -72,7 +72,7 @@ Päike ilmselgelt; T 1.0
 Ma ei tea; C 2.0
 Lõvid võidaks, kui nad ründaks öösel; V 1.0
 Mis küsimus see on, ma ei jaksa enam vastata; S 1.0
-
+---
 
 
 
